@@ -73,8 +73,9 @@ function App() {
         <Card upCount={upCount} jeff={pickAJeff()} />
         <Card upCount={upCount} jeff={pickAJeff()} />
         <Card upCount={upCount} jeff={pickAJeff()} />
-
+        <Card upCount={upCount} jeff={pickAJeff()} />
       </div>
+      
       <Winner show={jazzFound} count={count} handleClose={restart} />
     </div>
   );
