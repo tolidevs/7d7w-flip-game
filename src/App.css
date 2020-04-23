@@ -20,15 +20,18 @@ h1 {
 
 h2 {
   margin: 0px;
-  font-size: 3rem;
+  font-size: 4rem;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: yellow;
   padding-bottom: 20px;
   font-family: monospace;
+  font-weight: bold;
   color: magenta;
 }
 #headers {
+  border-radius: 5px;
   background-color: rgba(256,256,256,0.6);
+  margin-bottom: 10px;
 }
 
 .App {
@@ -108,6 +111,7 @@ img {
 }
 
 .modal-main {
+  border-radius: 10px;
   position:fixed;
   background: white;
   width: 80%;

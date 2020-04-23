@@ -61,6 +61,10 @@ function App() {
         <Card upCount={upCount} jeff={pickAJeff()} />
         <Card upCount={upCount} jeff={pickAJeff()} />
         <Card upCount={upCount} jeff={pickAJeff()} />
+        
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
         <Card upCount={upCount} jeff={Jazzy} win={() => setJazzFound(true)} />
         <Card upCount={upCount} jeff={pickAJeff()} />
         <Card upCount={upCount} jeff={pickAJeff()} />
@@ -71,11 +75,8 @@ function App() {
         <Card upCount={upCount} jeff={pickAJeff()} />
         <Card upCount={upCount} jeff={pickAJeff()} />
         <Card upCount={upCount} jeff={pickAJeff()} />
-        <Card upCount={upCount} jeff={pickAJeff()} />
-        <Card upCount={upCount} jeff={pickAJeff()} />
-        <Card upCount={upCount} jeff={pickAJeff()} />
       </div>
-      
+
       <Winner show={jazzFound} count={count} handleClose={restart} />
     </div>
   );
