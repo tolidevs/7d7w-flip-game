@@ -3,14 +3,42 @@
 }
 
 body { 
-  font-family: sans-serif; 
+  font-family: 'Fontdiner Swanky', cursive;
   background-color: #FBFEF9;
-  color: #f39237;
-  -webkit-text-fill-color: #f39237; /* Will override color (regardless of order) */
+  color: yellow;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #191923;
+  -webkit-text-stroke-color: rgb(21, 12, 71);
+  background-image: url('./images/2621720.jpg');
+  background-size: cover;
 }
+
+h1 {
+  font-size: 5rem;
+  margin: 10px;
+  padding: 0px;
+}
+
+h2 {
+  margin: 0px;
+  font-size: 3rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: yellow;
+  padding-bottom: 20px;
+  font-family: monospace;
+  color: magenta;
+}
+#headers {
+  background-color: rgba(256,256,256,0.6);
+}
+
 .App {
+  text-align: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.game {
+  margin: auto;
   display: grid;
   grid-template-columns: repeat( auto-fill, 200px) ; 
   column-gap: 15px;
@@ -18,19 +46,21 @@ body {
 }
 
 img {
-  width: 200px;
+  max-width: 200px;
   max-height: 220px;
 }
 
 .scene {
   width: 200px;
   height: 220px;
-  border: 1px solid #FBFEF9;
+  /* border-radius: 5px;
+  border: 1px solid #FBFEF9; */
   margin: 0;
   perspective: 600px;
 }
 
 .card {
+  border-radius: 5px;
   width: 100%;
   height: 100%;
   transition: transform 1s;
@@ -44,6 +74,7 @@ img {
 }
 
 .card__face {
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,10 +90,37 @@ img {
 }
 
 .card__face--front {
-  background: #bf1363;
+  background: magenta;
 }
 
 .card__face--back {
-  background: #191923;
+  background: rgb(21, 12, 71);
   transform: rotateY(180deg);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position:fixed;
+  background: white;
+  width: 80%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
 }

@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Card from './Card'
+import Winner from './Winner'
 
 import Burger from './images/burger_jeff.jpg'
 import Cheeky from './images/cheeky_jeff.jpg'
@@ -36,28 +37,45 @@ function App() {
     setCount(count + 1)
   }
 
+  const restart = () => {
+    setCount(0)
+    setJazzFound(false)
+  }
+
   return (
     <div className="App">
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={Jazzy} onClick={() => setJazzFound(true)}/>
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
-      <Card upCount={upCount} jeff={pickAJeff()} />
+      <div id="headers">
+        <h1>Jeff Flip!</h1>
+        <h2>Can you find DJ Jazzy Jeff in a sea of Goldblums?</h2>
+      </div>
+      
+      <div className="game">
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={Jazzy} win={() => setJazzFound(true)} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+        <Card upCount={upCount} jeff={pickAJeff()} />
+
+      </div>
+      <Winner show={jazzFound} count={count} handleClose={restart} />
     </div>
   );
 }
