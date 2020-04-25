@@ -9,7 +9,7 @@ body {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(21, 12, 71);
   background-image: url('./images/2621720.jpg');
-  background-size: cover;
+  background-size: contain;
 }
 
 h1 {
